@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getImagePath } from "@/lib/config";
 
 const products = [
   {
     id: 1,
     name: "Brown Rice",
     price: "₹1,350",
-    image: "/brown-rice.webp",
+    image: getImagePath("brown-rice.webp"),
     description: "Premium quality brown rice, rich in fiber and nutrients",
     features: ["High in Fiber", "Nutrient Rich", "Organic"]
   },
@@ -14,7 +15,7 @@ const products = [
     id: 2,
     name: "Sona Massori BPT (Raw Rice)",
     price: "₹1,350",
-    image: "/sona-massori.jpeg",
+    image: getImagePath("sona-massori.jpeg"),
     description: "Traditional Sona Massori basmati rice, perfect for daily cooking",
     features: ["Aromatic", "Long Grain", "Premium Quality"]
   },
@@ -22,7 +23,7 @@ const products = [
     id: 3,
     name: "Fortified Rice",
     price: "₹999",
-    image: "/fortified-rice.webp",
+    image: getImagePath("fortified-rice.webp"),
     description: "Nutrient-enriched rice with added vitamins and minerals",
     features: ["Vitamin Enriched", "Iron Fortified", "Healthy Choice"]
   }
