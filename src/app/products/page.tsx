@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getImagePath } from "@/lib/config";
+import { getImagePath, getPagePath } from "@/lib/config";
 
 const products = [
   {
@@ -37,19 +37,19 @@ export default function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-slate-800">
+              <Link href={getPagePath("/")} className="text-2xl font-bold text-slate-800">
                 vvr rice
               </Link>
             </div>
             <div className="flex items-center space-x-8">
               <Link 
-                href="/" 
+                href={getPagePath("/")} 
                 className="text-slate-600 hover:text-slate-800 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Home
               </Link>
               <Link 
-                href="/products" 
+                href={getPagePath("/products")} 
                 className="text-slate-600 hover:text-slate-800 px-3 py-2 text-sm font-medium transition-colors"
               >
                 Products

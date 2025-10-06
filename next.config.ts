@@ -6,8 +6,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/vvr-rice' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/vvr-rice' : '',
+  // Only use assetPrefix for static assets, not basePath for routing
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/tmp-testing' : '',
+  // Remove basePath to avoid issues with static assets
+  // basePath: process.env.NODE_ENV === 'production' ? '/tmp-testing' : '',
 };
 
 export default nextConfig;

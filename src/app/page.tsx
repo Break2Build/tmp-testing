@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getPagePath } from "@/lib/config";
 
 export default function Home() {
   return (
@@ -8,19 +9,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-gray-900">
+              <Link href={getPagePath("/")} className="text-2xl font-bold text-gray-900">
                 vvr rice
               </Link>
             </div>
             <div className="flex items-center space-x-8">
               <Link 
-                href="/" 
+                href={getPagePath("/")} 
                 className="text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium"
               >
                 Home
               </Link>
               <Link 
-                href="/products" 
+                href={getPagePath("/products")} 
                 className="text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium"
               >
                 Products
